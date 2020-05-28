@@ -20,7 +20,11 @@ public class CastingPrimitives {
         //Explicit Cast on the operation
         short z2 = (short)(x2 *y2); // EL resultado de una operacion entre shorts, estos son promovidos a int
 
+        //Right-Hand operations may never be reached
 
+        int xR = 6;
+
+        boolean yR = (x >= 6) | (++x <= 7);
 
     }
 }
