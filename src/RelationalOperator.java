@@ -1,5 +1,6 @@
+import java.io.File;
 import java.util.Random;
-
+import java.io.FileReader;
 
 public class RelationalOperator {
 
@@ -90,7 +91,60 @@ public class RelationalOperator {
 
         System.out.println("Resultado de x: " + x3);
 
+        // Entity Operator, you can only compare
+        // Two numeric primitive types
+        // Two boolean values
+        // Two objects, including null and Stirng
 
 
+        if(5==5.00){
+
+            System.out.println("The int is promoted to Double in order to compare");
+        }
+
+        boolean  y4 = false;
+        //the assigment return the value of the assigemnt itself
+        boolean x4 = (y4 = true);
+
+        System.out.println("El valor de x en asignacion es: " + x4);
+
+        //Not clear why output false...
+        boolean z4 = (y4 == true);
+
+        System.out.println("El valor de y en comparacion es: " + z4);
+
+        //Comparing Objects
+
+
+        File yFile = new File("/home/david/java_proyects/HelloWorld/src/myFile.txt");
+
+        File xFile = new File("/home/david/java_proyects/HelloWorld/src/myFile.txt");
+
+        //Try-Catch needed
+        try{
+            FileReader myFileReader = new FileReader(xFile);
+
+            System.out.println("Esta es la lectura del archivo de texto");
+
+            char[] mycharArray = new char[50];
+
+            //It reads char by char
+            myFileReader.read(mycharArray);
+            myFileReader.read(mycharArray);
+            myFileReader.read(mycharArray);
+
+            System.out.println("Esto es lo que tiene el archivo" + mycharArray[0] + " " + mycharArray[1] + " " + mycharArray[2]);
+        }
+        //You can Catch any Expeption with "Expeption" due to
+        catch(Exception e){
+
+            System.out.println(e.getMessage());
+        }
+
+        File zFile = xFile;
+
+        System.out.println("The two references have the same Object constructor " + (xFile == yFile));
+
+        System.out.println("The two references in this case do point to the same objetc" + (xFile == zFile));
     }
 }
