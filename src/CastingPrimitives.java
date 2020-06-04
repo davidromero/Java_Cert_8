@@ -26,5 +26,7 @@ public class CastingPrimitives {
 
         boolean yR = (x >= 6) | (++x <= 7);
 
+        String myString = "Testing";
+
     }
 }

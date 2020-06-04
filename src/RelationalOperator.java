@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 public class RelationalOperator {
 
     public static void main(String[] args){
@@ -74,11 +75,22 @@ public class RelationalOperator {
         // if(myInt != null & myInt < 8) ... It throws the NullPointerException Too
         // Hence Short-Circuit is needed
         if(myInt != null && myInt < 8) {
-            System.out.println("Si evaluea derecha rand = " + rand + " myInt = " + myInt);
+            System.out.println("Si evalua derecha rand = " + rand + " myInt = " + myInt);
         }
         else{
             System.out.println("No evalua derecha rand = " + rand + " myInt = " + myInt);
         }
+
+        int x3 = 6;
+
+
+        //In this case the boolean expression return a value
+        //The expression uses Short-Circuit and doesnt evaluate the right
+        boolean y3 = (x3 >= 6) || (x3++ <=7);
+
+        System.out.println("Resultado de x: " + x3);
+
+
 
     }
 }
