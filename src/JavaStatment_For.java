@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class JavaStatment_For {
     public static void main(String[] args){
@@ -42,6 +43,13 @@ public class JavaStatment_For {
         // }
 
         // for-each Statment
+        // for(datatype instance: collection) {
+        //      // use instance
+        // }
+
+        // The collection must be an array or an object that implements java.lang.Iterable;
+        // On each iteration of the loop the named variable is assigned
+
         System.out.println("for-each Statment");
         List<String> myArrayList = new ArrayList<>();
         myArrayList.add("Seth");
@@ -56,5 +64,36 @@ public class JavaStatment_For {
         for (String name : myArrayList){
             System.out.println(name + " ");
         }
+
+        System.out.println("for in String Array");
+        final String[] names = new String[3];
+
+        names[0] = "Lisa";
+        names[1] = "Kevin";
+        names[2] = "Roger";
+
+        for(String name: names){
+            System.out.print(name + ", ");
+        }
+
+        java.util.List<Integer> values = new java.util.ArrayList<Integer>();
+        values.add(0);
+        values.add(1);
+        values.add(2);
+        for(Integer value: values){
+            System.out.println(value + ", ");
+        }
+
+        Iterator myIterator = new Iterator() {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public Object next() {
+                return null;
+            }
+        };
     }
 }
