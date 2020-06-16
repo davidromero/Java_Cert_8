@@ -43,7 +43,5 @@ public class JavaStatment_Switch {
                 break;
 
         }
-
-
     }
 }

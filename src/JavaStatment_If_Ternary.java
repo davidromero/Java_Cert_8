@@ -1,4 +1,4 @@
-public class JavaStatments_If_Ternary {
+public class JavaStatment_If_Ternary {
 
     public static void main(String[] args){
 
