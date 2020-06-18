@@ -12,6 +12,9 @@ public class Chapter2_QA {
         assigment_inside_if();
         pre_post_unary();
         do_while_statment();
+        label_continue();
+        weird_while();
+        final_switch();
     }
 
     protected static void promoting(){
@@ -133,5 +136,47 @@ public class Chapter2_QA {
         }
         while(keepGoing);
         System.out.println(result);
+    }
+
+    protected static void label_continue(){
+
+        System.out.println("label_continue");
+        int count = 0;
+        ROW_LOOP: for(int row = 1; row <= 3; row++) {
+            System.out.println("Outer, row: " + row);
+            for (int col = 1; col <= 2; col++) {
+                System.out.println("Insider, col: " + col);
+                if (row * col % 2 == 0) continue ROW_LOOP;
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
+    protected static void weird_while(){
+
+        System.out.println("weird_while");
+        int m = 9, n = 1, x = 0;
+        while(m > n){
+            m--;
+            n += 2;
+            x += m + n;
+        }
+        System.out.println(x);
+    }
+
+    protected static void final_switch(){
+
+        System.out.println("final_switch");
+        final char a = 'A', d = 'D'; // is final so can be use on the switch
+        char grade = 'B';
+
+        switch (grade){
+            case a   :
+            case 'B' : System.out.print("great"); // do not have break so it evaluates the other statment
+            case 'C' : System.out.print("good"); break;
+            case d:
+            case 'F' : System.out.print("not good");
+        }
     }
 }
