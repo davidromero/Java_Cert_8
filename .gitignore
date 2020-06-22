@@ -1,6 +1,6 @@
 .idea/
 *~
-.iml
+*.iml
 *.class
 *.jar
 *.kotlin_module
