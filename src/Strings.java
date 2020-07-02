@@ -83,8 +83,8 @@ public class Strings {
 
         System.out.println(stringOne.indexOf("ad",2)); // return -1 when no match
 
-        System.out.println("---- substring()");
         // substring()
+        System.out.println("---- substring()");
 
         // int subtring(int beginIndex)
         // int subtring(int beginIndex, int endIndex)
@@ -94,16 +94,17 @@ public class Strings {
         System.out.println(stringS.substring(4));
         System.out.println(stringS.substring(4, 4)); //empty string
         System.out.println(stringS.substring(stringS.indexOf("ez")));
-        System.out.println(stringS.substring(4,9)); // from index 4 (include-char0 until index 8 (dont include-char)
+        System.out.println(stringS.substring(4,9)); // from index 4 (include-char0 until index 8 (dont include-char8)
         System.out.println(stringS.substring(8,20));
 
         // System.out.println(stringS.substring(8,40)); String index out of range, to large index
         // System.out.println(stringS.substring(20,8)); String index out of range, negative index
 
-        System.out.println("---- toUpperCase()");
-        System.out.println("---- toLowerCase()");
         // toLowerCase()
         // toUpperCase()
+        System.out.println("---- toUpperCase()");
+        System.out.println("---- toLowerCase()");
+
 
         // String toLowerCase(String str)
         // String toUpperCase(String str)
@@ -116,9 +117,92 @@ public class Strings {
         System.out.println(stringL2.toLowerCase());
         System.out.println(stringL2.toLowerCase());
 
+        // equals()
+        // equalsIgnoreCase()
         System.out.println("---- equals()");
         System.out.println("---- equalsIgnoreCase()");
 
+        // boolean equals(String str)
+        // boolean equalsIgnoreCase(String str)
 
+        System.out.println("abc".equals("abc"));
+        System.out.println("ABC".equals("abc"));
+        System.out.println("abc".equalsIgnoreCase("ABC"));
+
+        // startsWith()
+        // endsWith()
+        System.out.println("---- startsWith()");
+        System.out.println("---- endsWith()");
+
+        // boolean startsWith(String prefix)
+        // boolean endsWith(String suffix)
+
+        System.out.println("abc".startsWith("a")); // true
+        System.out.println("abc".startsWith("A")); // false
+        System.out.println("abc".endsWith("c")); // true
+        System.out.println("abc".endsWith("a")); // false
+
+        // contains()
+        System.out.println("---- contains()");
+
+        // boolean contains(String str)
+
+        System.out.println("Los de la Nazza".contains("z"));
+        System.out.println("Double Chain Compression".contains("d"));
+
+        // replace()
+        System.out.println("Guardalo para la proxima vez".replace('a','e'));
+        System.out.println("Walk around like cars beyond arguments".replace("ar","ca"));
+
+        // trim()                                // include \t \n \r and ' '
+        System.out.println("---- trim()");
+        // String trim()
+
+        // Method Chaining
+        System.out.println("---- Method Chaining");
+
+        System.out.println("abc".trim());
+        System.out.println("\t a b c\n".trim());
+
+        String result = "AniMaL ".trim().toLowerCase().replace('a', 'A');
+        System.out.println(result);
+
+        String a = "abc";
+        String b = a.toUpperCase();
+        b = b.replace("B", "2").replace('C', '3');
+        System.out.println("a=" + a);
+        System.out.println("b=" + b);
+
+        InefficientStringChaining();
+        EfficientStringBuilder();
+        MutabilityChainingStringB();
+    }
+
+    protected static void InefficientStringChaining(){
+        String alpha = "";
+        for(char current = 'a'; current <= 'z'; current++)
+            alpha += current;      // String are inmutable, so a new intances of the String object is created and
+        System.out.println(alpha); // the old one is eligible for the GC
+        System.out.println(Runtime.getRuntime().freeMemory());
+    }
+
+    protected static void EfficientStringBuilder(){
+        StringBuilder alpha = new StringBuilder();
+        for(char current = 'a'; current <= 'z'; current++)
+            alpha.append(current);
+        System.out.println(alpha);
+        System.out.println(Runtime.getRuntime().freeMemory());
+    }
+
+    // StringBuilder is not Mutable, StringBuilder changes its own state and returns a reference to the object
+
+    protected static void MutabilityChainingStringB(){
+        System.out.println("---- MutabilityChainingStringB()");
+        StringBuilder sb = new StringBuilder("start"); // sb StringBuilder Object
+        sb.append("+middle"); // Alter state of the object
+        StringBuilder same = sb.append("+end"); // create second Object (same), sb.append() alters the state
+                                                // return a reference to it
+        System.out.println("this is sb: "+sb.toString());
+        System.out.println("this is same: "+same.toString());
     }
 }
