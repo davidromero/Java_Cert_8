@@ -4,7 +4,7 @@ import java.io.FileReader;
 
 public class RelationalOperator {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         String myString = new String("A");
 
@@ -43,7 +43,7 @@ public class RelationalOperator {
         int myInt3 = myInt1 ^ myInt2;
 
         // bitwise operation AND, true when both true
-        int myInt4 =  myInt1 & myInt2;
+        int myInt4 = myInt1 & myInt2;
 
         // bitwise operator OR, true when one is true
         int myInt5 = myInt1 | myInt2;
@@ -59,14 +59,14 @@ public class RelationalOperator {
     }
 
     //The main use of the Short-Cirtuit opeartor is for checking null objects before performing any operation
-    public static void TestShortCircuit(){
+    public static void TestShortCircuit() {
         Random myRandom = new Random();
 
         int upperBond = 10;
         int rand = myRandom.nextInt(upperBond);
 
         Integer myInt = null;
-        if(rand > 4){
+        if (rand > 4) {
             myInt = myRandom.nextInt(upperBond);
         }
 
@@ -75,10 +75,9 @@ public class RelationalOperator {
         // Without the &&
         // if(myInt != null & myInt < 8) ... It throws the NullPointerException Too
         // Hence Short-Circuit is needed
-        if(myInt != null && myInt < 8) {
+        if (myInt != null && myInt < 8) {
             System.out.println("Si evalua derecha rand = " + rand + " myInt = " + myInt);
-        }
-        else{
+        } else {
             System.out.println("No evalua derecha rand = " + rand + " myInt = " + myInt);
         }
 
@@ -87,7 +86,7 @@ public class RelationalOperator {
 
         //In this case the boolean expression return a value
         //The expression uses Short-Circuit and doesnt evaluate the right
-        boolean y3 = (x3 >= 6) || (x3++ <=7);
+        boolean y3 = (x3 >= 6) || (x3++ <= 7);
 
         System.out.println("Resultado de x: " + x3);
 
@@ -97,12 +96,12 @@ public class RelationalOperator {
         // Two objects, including null and Stirng
 
 
-        if(5==5.00){
+        if (5 == 5.00) {
 
             System.out.println("The int is promoted to Double in order to compare");
         }
 
-        boolean  y4 = false;
+        boolean y4 = false;
         //the assigment return the value of the assigemnt itself
         boolean x4 = (y4 = true);
 
@@ -121,7 +120,7 @@ public class RelationalOperator {
         File xFile = new File("/home/david/java_proyects/HelloWorld/src/myFile.txt");
 
         //Try-Catch needed
-        try{
+        try {
             FileReader myFileReader = new FileReader(xFile);
 
             System.out.println("Esta es la lectura del archivo de texto");
@@ -136,7 +135,7 @@ public class RelationalOperator {
             System.out.println("Esto es lo que tiene el archivo" + mycharArray[0] + " " + mycharArray[1] + " " + mycharArray[2]);
         }
         //You can Catch any Expeption with "Expeption" due to
-        catch(Exception e){
+        catch (Exception e) {
 
             System.out.println(e.getMessage());
         }

@@ -14,7 +14,7 @@ public class Primitives {
     public static float myFloat2 = 0.7f;
     public static float myFloat3 = myFloat1 + myFloat2;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Es el float " + myFloat3);
 
         System.out.println(0.7 + 0.1);

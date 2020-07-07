@@ -1,12 +1,12 @@
 public class HelloWorld {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         //Increment, Decrement Operators
         // ++x, operator is applied and the value of return is the new value
         // x++, original value of expression is returned and operator is applied after
 
-        int x=3;
-        int y= ++x * 5 / x-- + --x;
+        int x = 3;
+        int y = ++x * 5 / x-- + --x;
 
         // Evaluar la operacion de izquierda a derecha
 

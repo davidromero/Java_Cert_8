@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class JavaStatment_For {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        for(int i=0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
 
             System.out.print(i + "");
         }
@@ -16,10 +16,10 @@ public class JavaStatment_For {
         //    System.out.println("Hello World");
         //}
 
-        int x =0;
+        int x = 0;
 
         // Can have multiple initializations and update Statments
-        for(long y = 0, z= 4; x < 5 && y < 10; x++, y++){
+        for (long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
             System.out.println(y + " ");
         }
         System.out.println("x " + x);
@@ -33,8 +33,8 @@ public class JavaStatment_For {
         int x2 = 0;
         long y2 = 10;
 
-        for (y2 = 0, x2 = 4; x2 < 5 && y2 < 10; x2++, y2++){
-            System.out.println(x2 +" ");
+        for (y2 = 0, x2 = 4; x2 < 5 && y2 < 10; x2++, y2++) {
+            System.out.println(x2 + " ");
         }
 
         // Variables on the initialization block MUST be the same
@@ -57,11 +57,11 @@ public class JavaStatment_For {
 
         List<String> myArray = Arrays.asList("Jamie", "Jones");
 
-        for (String name: myArray) {
+        for (String name : myArray) {
             System.out.println(name + " ");
         }
 
-        for (String name : myArrayList){
+        for (String name : myArrayList) {
             System.out.println(name + " ");
         }
 
@@ -72,7 +72,7 @@ public class JavaStatment_For {
         names[1] = "Kevin";
         names[2] = "Roger";
 
-        for(String name: names){
+        for (String name : names) {
             System.out.print(name + ", ");
         }
 
@@ -80,7 +80,7 @@ public class JavaStatment_For {
         values.add(0);
         values.add(1);
         values.add(2);
-        for(Integer value: values){
+        for (Integer value : values) {
             System.out.println(value + ", ");
         }
 

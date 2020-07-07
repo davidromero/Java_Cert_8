@@ -1,8 +1,8 @@
 public class CompoundAssigment {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        int x = 2, z =3;
+        int x = 2, z = 3;
 
         x = x * z; // Simple Assigment Operator
 
@@ -24,7 +24,7 @@ public class CompoundAssigment {
 
         long x3 = 5;
 
-        long y3 = (x3=3);
+        long y3 = (x3 = 3);
 
         System.out.println(" x= " + x3 + " y= " + y3);
 

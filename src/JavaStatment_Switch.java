@@ -1,6 +1,6 @@
 public class JavaStatment_Switch {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Switch Statment Supports
         // Primitive Numeric (char - Character, short - Short, byte - Byte, int - Integer)
@@ -14,7 +14,7 @@ public class JavaStatment_Switch {
         // Literals, ENUMS, constants or final contant variables
 
         int dayOfWeek = 0;
-        switch(dayOfWeek) {
+        switch (dayOfWeek) {
             case 0:
                 System.out.println("Sunday");
             default:
@@ -29,7 +29,7 @@ public class JavaStatment_Switch {
         char testingSwitch = 'A';
 //      char testingSwitch = 'X';
 
-        switch (testingSwitch){
+        switch (testingSwitch) {
 
             case 'A':
                 System.out.println("Pasa A");
