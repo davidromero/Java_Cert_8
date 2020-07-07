@@ -2,7 +2,6 @@ import java.lang.StringBuffer;
 import java.lang.StringBuilder;
 
 public class Strings {
-
     public static void main(String[] args) {
 
         System.out.println(1 + 2);         // 3
@@ -20,13 +19,9 @@ public class Strings {
         // Strings are everywhere and can use up to 25-40 of a production aplication
         // String Pool or Intern Pool
         System.out.println("---- String Methods ----");
-
         String name = "Flufyy"; // Uses the String Pool
-
         String nameNoPool = new String("Fluffy"); //It tell the JVM to not to use the Pool
-
         String myString = "Viendo el Horizonte donde el Sol se Esconde";
-
         String string = "animals";
 
         //
@@ -35,16 +30,12 @@ public class Strings {
 
         // length()
         System.out.println("---- length()");
-
         System.out.println(string.length());
-
         System.out.println("".length() + "Length of an empty String");
 
         // charAt()
         System.out.println("---- charAt()");
-
         System.out.println(".charAt()" + string.charAt(0)); // a indexes start at 0
-
         System.out.println(".charAt()" + string.charAt(6)); // s
 
         // System.out.println(".charAt()" + string.charAt(7)); //throws exception
@@ -168,18 +159,76 @@ public class Strings {
         EfficientStringBuilder();
         MutabilityChainingStringB();
         TestingMutabilityStringB();
+        MutabilityonStringB();
         constructingStringBuilder();
         stringBuilderMethods1();
 
         // append() StringBuilder
         // Stringbuilder append(String str)
 
+        System.out.println("---- append() StringBuilder");
         StringBuilder sb1 = new StringBuilder().append(1).append('c');
         sb1.append("-").append(true);
         System.out.println(sb1);
+
+        // insert() StringBuilder
+        // StringBuilder insert(int offset, char ch)
+        // StringBuilder insert(int offset, int i)
+        // StringBuilder insert(int offset, long lg)
+        // StringBuilder insert(int offset, float ft)
+        // StringBuilder insert(int offset, double db)
+        // StringBuilder insert(int offset, String str)
+        // StringBuilder insert(int offset, boolean bool)
+        // StringBuilder insert(int offset, char[] char)
+        // StringBuilder insert(int offset, Charsequence charseq)
+        // StringBuilder insert(int offset, char[], int i1, int i2)
+        // StringBuilder insert(int offset, Charsequence charseq, int i1, int i2)
+        // StringBuilder insert(int offset, Object obj)
+        System.out.println("---- insert() StringBuilder");
+        StringBuilder sb2 = new StringBuilder("Space Vim");
+        sb2.insert(0, 2);
+        sb2.insert(0, '-');
+        sb2.insert(0, 2.4f);
+        sb2.insert(sb2.length(), '-');
+        sb2.insert(sb2.length(), "dd");
+        sb2.insert(sb2.length(), '-');
+        char[] charAr = {'a', 'b', 'c', 'd', 'e'};
+        sb2.insert(sb2.length(), charAr);
+        sb2.insert(sb2.length(), '-');
+        sb2.insert(sb2.length(), charAr, 2, 1); // the first index is the offset and the second the number of chars
+        System.out.println(sb2);
+
+        indexesStringBuilder();
+
+        // delete() deletecharAt()
+        // Stringbuilder delete(int start, int end)
+        // StirngBuilder deletecharAt(int index)
+
+        System.out.println("---- delete() deletecharAt() StringBuilder");
+        StringBuilder sb3 = new StringBuilder("Unicorns dont Exist");
+        sb3.delete(0, 8); // StringBuilder Object is affected, -> is "dont Exist"
+        sb3.deleteCharAt(4); // delete 't'
+        System.out.println(sb3);
+
+        // reverse()
+        // StringBuilder reverse()
+
+        System.out.println("---- reverse() StringBuilder");
+        StringBuilder sb4 = new StringBuilder("divad");
+        sb4.reverse(); // it affects the SringBuilder Object
+        System.out.println(sb4);
+
+        // toString()
+        //String s = StringBuilder.toString()
+
+        StringBuilder sb5 = new StringBuilder("dav10");
+        String ns = sb5.toString();
+        System.out.println(ns);
+        System.out.println((ns instanceof String) + " StringBuilder.toString() instanceof String");
     }
 
     protected static void InefficientStringChaining() {
+        System.out.println("---- InefficientStringChaining()");
         String alpha = "";
         for (char current = 'a'; current <= 'z'; current++)
             alpha += current;      // String are inmutable, so a new intances of the String object is created and
@@ -188,6 +237,7 @@ public class Strings {
     }
 
     protected static void EfficientStringBuilder() {
+        System.out.println("---- EfficientStringBuilder()");
         StringBuilder alpha = new StringBuilder();
         for (char current = 'a'; current <= 'z'; current++)
             alpha.append(current);
@@ -196,7 +246,6 @@ public class Strings {
     }
 
     // StringBuilder is not Mutable, StringBuilder changes its own state and returns a reference to the object
-
     protected static void MutabilityChainingStringB() {
         System.out.println("---- MutabilityChainingStringB()");
         StringBuilder sb = new StringBuilder("start"); // sb StringBuilder Object
@@ -255,5 +304,15 @@ public class Strings {
         System.out.println("StirngBuilder: " + strB1);
     }
 
-
+    protected static void indexesStringBuilder() {
+        System.out.println("---- indexesStringBuilder()");
+        StringBuilder sb = new StringBuilder("Payara");
+        sb.insert(0, 's');
+        sb.insert(0, 'i');
+        System.out.println(sb);
+        sb = new StringBuilder("Payara");
+        sb.insert(0, 's');
+        sb.insert(1, 'i'); // index 0 is now 's' and not 'P'
+        System.out.println(sb);
+    }
 }
