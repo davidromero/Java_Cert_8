@@ -1,6 +1,6 @@
 public class Autoboxing {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         // Integer.parseInt returns an int
         Integer first = Integer.parseInt("5");

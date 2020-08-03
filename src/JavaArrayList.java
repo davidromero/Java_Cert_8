@@ -27,6 +27,9 @@ public class JavaArrayList {
         set_ArrayList();
         isEmpty_ArrayList();
         size_ArrayList();
+        clear_ArrayList();
+        contains_ArrayList();
+        equals_ArrayList();
     }
 
     protected static void add_ArrayList() {
@@ -110,7 +113,7 @@ public class JavaArrayList {
         //int size()
         System.out.println("------ size_ArrayList()");
 
-        List<Boolean> historyOrderStatus =  new ArrayList<Boolean>();
+        List<Boolean> historyOrderStatus = new ArrayList<Boolean>();
 
         System.out.println(historyOrderStatus.size());
         historyOrderStatus.add(true);
@@ -119,5 +122,46 @@ public class JavaArrayList {
         System.out.println(historyOrderStatus.size());
     }
 
+    protected static void clear_ArrayList() {
+        // void clear()
+        System.out.println("------ clear_ArrayList()");
+
+        List<String> locationHistoryOrders = new ArrayList<String>();
+        locationHistoryOrders.add("Huehuetenango");
+        locationHistoryOrders.add("Coban");
+        locationHistoryOrders.add("Izabal");
+        System.out.println(locationHistoryOrders.isEmpty());
+        System.out.println(locationHistoryOrders.size());
+        locationHistoryOrders.clear();
+        System.out.println(locationHistoryOrders.isEmpty());
+        System.out.println(locationHistoryOrders.size());
+    }
+
+    protected static void contains_ArrayList() {
+        // boolean contains(Object object)
+        System.out.println("------ contains_ArrayList()");
+
+        // Method needs to implement equals, in these case, String implements equals()
+        List<String> birds = new ArrayList<String>();
+        birds.add("hawk");
+        System.out.println(birds.contains("Bat"));
+        System.out.println(birds.contains("hawk"));
+    }
+
+    protected static void equals_ArrayList() {
+        // boolean equals(Object object)
+        System.out.println("------ equals_ArrayList()");
+
+        // ArrayList has a custom implementation of equals()
+        List<String> one = new ArrayList<String>();
+        List<String> two = new ArrayList<String>();
+        one.add("a");
+        System.out.println(one.equals(two));
+        two.add("a");
+        System.out.println(one.equals(two));
+        one.add("b");
+        two.add(0, "b");
+        System.out.println(one.equals(two));
+    }
 
 }

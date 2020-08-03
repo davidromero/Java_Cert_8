@@ -9,7 +9,9 @@ public class Temporal {
     }
 
     // Second to exec
-    { first = "block"; }
+    {
+        first = "block";
+    }
 
     public void print() {
         System.out.println(first);
