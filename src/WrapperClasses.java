@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class WrapperClasses {
 
     public static void main(String[] args){
@@ -56,7 +59,27 @@ public class WrapperClasses {
         Double wraDouble = Double.valueOf("2.2");
 
         // Autoboxing
+        List<Double> weights = new ArrayList<>();
+        weights.add(50.5); // AutoBox the primitive
+        weights.add(new Double(60.5));
+        weights.remove(50.5); // AutoBox the primitive
+        double first = weights.get(0); // unboxing the Wrapper
 
+        System.out.println(weights.toString());
+
+        // Cant unbox a Null
+        List<Integer> heights = new ArrayList<>();
+        heights.add(null); // boxing an null ?
+        // int h = heights.get(0);qqqq
+        System.out.println(heights.toString());
+
+        // AutoBoxing Integers
+        List<Integer> numbers  = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.remove(new Integer(1));
+        //numbers.remove(1);
+        System.out.println(numbers);
 
 
     }
