@@ -5,7 +5,6 @@ import java.util.List;
 public class  ConvertingArrayandList {
 
     public static void main(String[] args){
-
         convertArrayListToArray();
         convertArrayToArrayList();
     }
@@ -26,6 +25,6 @@ public class  ConvertingArrayandList {
         list.set(1, "test");
         array[0] = "new";
         for (String b : array) System.out.println(b + " ");
-        // list.remove(1);
+        // list.remove(1); the array is fixed size we cant remove from the list
     }
 }
