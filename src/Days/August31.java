@@ -11,6 +11,7 @@ public class August31 {
         sneakyfor();
         // arraysDeclaration();
         multipleDimensionsArrayLenght();
+        //finalVariableSwitch();
     }
 
     protected static void sneakyfor(){
@@ -34,11 +35,31 @@ public class August31 {
     }
 
     protected static void multipleDimensionsArrayLenght(){
+        System.out.println("---------- multipleDimensionsArrayLenght");
         int array[][] = new int[10][];
 
         array[0] = new int[3];
         array[1] = new int[2];
 
         System.out.println(array.length);
+    }
+
+    protected static void sortMultiDimensionArray(){
+        //Arrays.sort(); sort() takes single dimension array
+    }
+
+    protected static void finalVariableSwitch(){
+        System.out.println("---------- finalVariableSwitch");
+        final int x;
+        x = 10;
+
+        final int y = 2;
+        switch(x){
+            case x: {System.out.println("1");} // not final at compile time
+            case 1: System.out.println("B");
+            default:
+                System.out.println("default");break;
+            case y: System.out.println("C");
+        }
     }
 }
