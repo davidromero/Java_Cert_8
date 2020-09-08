@@ -55,7 +55,7 @@ public class August31 {
 
         final int y = 2;
         switch(x){
-            case x: {System.out.println("1");} // not final at compile time
+            //case x: {System.out.println("1");} // not final at compile time
             case 1: System.out.println("B");
             default:
                 System.out.println("default");break;
