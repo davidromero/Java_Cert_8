@@ -1,3 +1,5 @@
+package Chapters;
+
 public class Primitives {
 
     public static boolean myBoolean;

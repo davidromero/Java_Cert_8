@@ -1,3 +1,5 @@
+package Chapters;
+
 public class RunTimeExceptions {
 
     public static void main(String[] args){

@@ -1,3 +1,5 @@
+package Chapters;
+
 import java.util.Arrays;
 
 public class JavaArrays {

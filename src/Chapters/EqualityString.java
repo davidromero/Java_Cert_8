@@ -1,3 +1,5 @@
+package Chapters;
+
 import java.util.Objects;
 
 public class EqualityString {

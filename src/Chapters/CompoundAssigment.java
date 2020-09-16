@@ -1,3 +1,5 @@
+package Chapters;
+
 public class CompoundAssigment {
 
     public static void main(String[] args) {
