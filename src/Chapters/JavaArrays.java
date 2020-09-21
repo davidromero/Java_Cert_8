@@ -139,6 +139,7 @@ public class JavaArrays {
 
         System.out.println("Asymetric Array: " + Arrays.toString(differentSizeAr[0]) +
                 " " + Arrays.toString(differentSizeAr[1]) + " " + Arrays.toString(differentSizeAr[2]));
+        System.out.println("Asymetric Array inner loop: " + differentSizeAr[0][1]);
     }
 
     protected static void arraysOfArrays() {
