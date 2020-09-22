@@ -1,9 +1,5 @@
 package Days;
 
-import javax.swing.text.DateFormatter;
-import java.time.temporal.ChronoField;
-import java.util.function.*;
-
 public class September21 {
 
     public static void main(String[] args){
